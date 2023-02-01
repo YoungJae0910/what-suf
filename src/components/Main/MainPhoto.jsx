@@ -5,11 +5,11 @@ import ImageListItem from "@mui/material/ImageListItem"
 import { ImageListItemBar } from "@mui/material"
 import styled from "styled-components"
 
-export default function StoreList() {
+export default function MainPhoto() {
     return (
         <WarpDiv>
             <Box sx={{ width: 1980, height: 1800, overflowY: "scroll" }}>
-                <ImageList variant="masonry" cols={5} gap={8}>
+                <ImageList variant="masonry" cols={5} gap={5}>
                     {itemData.map((item) => (
                         <ImageListItem key={item.img}>
                             <img
@@ -109,4 +109,5 @@ const WarpDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 `

@@ -4,16 +4,20 @@ import Main from "./components/Main/Main"
 import Info from "./components/MainTitle/Info"
 import MainSlide from "./components/MainSlider/MainSlider"
 import MainStore from "./components/MainStore/MainStore"
-import StoreList from "./components/MainStore/StoreList"
+import MainPhoto from "./components/Main/MainPhoto"
+import StoreGrid from "./components/MainStore/StoreGrid"
+import Header from "./components/Header/Header"
 
 function App() {
     return (
         <>
             <Main />
-            <StoreList />
+            <Header />
+            <MainPhoto />
             <Info />
             <MainStore />
             <MainSlide />
+            <StoreGrid />
         </>
     )
 }
