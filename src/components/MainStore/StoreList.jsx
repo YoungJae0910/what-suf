@@ -8,7 +8,7 @@ import styled from "styled-components"
 export default function StoreList() {
     return (
         <WarpDiv>
-            <Box sx={{ width: 1980, height: 1000, overflowY: "scroll" }}>
+            <Box sx={{ width: 1980, height: 1800, overflowY: "scroll" }}>
                 <ImageList variant="masonry" cols={5} gap={8}>
                     {itemData.map((item) => (
                         <ImageListItem key={item.img}>

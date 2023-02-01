@@ -26,9 +26,6 @@ export default function MainSlide() {
             <WarpDiv>
                 <MainSlider {...settings}>
                     <ImgDiv>
-                        <MainImg src={slider1} alt="배너1" srcSet="" />
-                    </ImgDiv>
-                    <ImgDiv>
                         <MainImg src={slider2} alt="배너2" srcSet="" />
                     </ImgDiv>
                     <ImgDiv>
@@ -49,7 +46,7 @@ const ContainerDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 20px;
 `
 
 const WarpDiv = styled.div`

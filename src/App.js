@@ -11,6 +11,9 @@ function App() {
         <>
             <Main />
             <StoreList />
+            <Info />
+            <MainStore />
+            <MainSlide />
         </>
     )
 }
