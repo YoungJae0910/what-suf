@@ -14,25 +14,35 @@ export default function StoreGrid() {
                 <ItemDiv></ItemDiv>
                 <ItemDiv></ItemDiv>
             </WrapDiv>
+            <ItemMoreBtn>More...</ItemMoreBtn>
         </ContainerDiv>
     )
 }
 
 const ContainerDiv = styled.div`
     display: flex;
+    flex-direction: column;
+    height: 750px;
     justify-content: center;
     align-items: center;
 `
 
 const WrapDiv = styled.div`
-    grid-gap: 250px;
+    height: 100%;
+    grid-gap: 200px;
     display: grid;
     grid-template-columns: 150px 150px 150px 150px;
     grid-template-rows: 150px 150px 150px;
-    margin-top: 50px;
+    margin-top: 150px;
 `
 const ItemDiv = styled.div`
-    width: 250px;
-    height: 350px;
-    background-color: red;
+    width: 220px;
+    height: 310px;
+    background-color: gray;
+`
+
+const ItemMoreBtn = styled.div`
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
 `

@@ -10,6 +10,7 @@ export default function MainReservation() {
 }
 
 const WarpDiv = styled.div`
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -6,6 +6,9 @@ export default function MainReservationGrid() {
         <WrapDiv>
             <ItemDiv></ItemDiv>
             <ItemDiv></ItemDiv>
+            <ItemDiv></ItemDiv>
+            <ItemDiv></ItemDiv>
+            <ItemMoreBtn>More...</ItemMoreBtn>
         </WrapDiv>
     )
 }
@@ -20,6 +23,11 @@ const WrapDiv = styled.div`
 const ItemDiv = styled.div`
     width: 1200px;
     height: 170px;
-    background-color: red;
+    background-color: gray;
     margin-bottom: 40px;
+`
+const ItemMoreBtn = styled.div`
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
 `
