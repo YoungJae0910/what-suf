@@ -7,6 +7,8 @@ import MainStore from "./components/MainStore/MainStore"
 import MainPhoto from "./components/Main/MainPhoto"
 import StoreGrid from "./components/MainStore/StoreGrid"
 import Header from "./components/Header/Header"
+import MainReservation from "./MainReservaition/MainReservation"
+import MainReservationGrid from "./MainReservaition/MainReservationGrid"
 
 function App() {
     return (
@@ -16,8 +18,9 @@ function App() {
             <MainPhoto />
             <Info />
             <MainStore />
-            <MainSlide />
             <StoreGrid />
+            <MainReservation />
+            <MainReservationGrid />
         </>
     )
 }
