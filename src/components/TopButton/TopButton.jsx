@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import hahahoho from "../../image/hahahoho.png"
 
-export default function Header() {
+export default function TopButton() {
     const [ScrollY, setScrollY] = useState(0) // window 의 pageYOffset값을 저장
     const [ScrollActive, setScrollActive] = useState(false)
     function handleScroll() {
@@ -24,45 +23,31 @@ export default function Header() {
         } //  window 에서 스크롤을 감시를 종료
     })
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
     return (
-        <>
-            {ScrollActive ? (
-                <WrapDiv>
-                    <MainLogo src={hahahoho} alt="" />
-                    <div>
-                        <HeaderBtn>SignUp</HeaderBtn>
-                        <HeaderBtn>Login</HeaderBtn>
-                    </div>
-                </WrapDiv>
-            ) : null}
-        </>
+        <>{ScrollActive ? <TopBtn onClick={scrollToTop}>Top</TopBtn> : null}</>
     )
 }
 
-const WrapDiv = styled.div`
-    width: 100%;
-    height: 60px;
+const TopBtn = styled.button`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0.1px;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.7);
-`
-const MainLogo = styled.img`
-    width: 150px;
-    margin-left: 20px;
-`
-
-const HeaderBtn = styled.button`
-    width: 80px;
+    width: 34px;
     height: 30px;
-    margin-right: 20px;
+    border: none;
+    border-radius: 10px;
+    top: 1px;
+    position: fixed;
     background-color: #21176a;
     color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    left: 95%;
+    top: 90%;
+    z-index: 1000;
 `
