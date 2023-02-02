@@ -54,6 +54,7 @@ const MainLogo = styled.img`
     width: 150px;
     margin-left: 20px;
 `
+
 const HeaderBtn = styled.button`
     width: 80px;
     height: 30px;

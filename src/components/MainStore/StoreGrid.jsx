@@ -14,15 +14,19 @@ export default function StoreGrid() {
                 <ItemDiv></ItemDiv>
                 <ItemDiv></ItemDiv>
             </WrapDiv>
+
             <ItemMoreBtn>More...</ItemMoreBtn>
+
         </ContainerDiv>
     )
 }
 
 const ContainerDiv = styled.div`
     display: flex;
+
     flex-direction: column;
     height: 750px;
+
     justify-content: center;
     align-items: center;
 `
