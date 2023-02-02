@@ -7,17 +7,14 @@ import MainStore from "./components/MainStore/MainStore"
 import MainPhoto from "./components/Main/MainPhoto"
 import StoreGrid from "./components/MainStore/StoreGrid"
 import Header from "./components/Header/Header"
+import Register from "./components/Auth/Register"
+import Login from "./components/Auth/Login"
 
 function App() {
     return (
         <>
-            <Main />
-            <Header />
-            <MainPhoto />
-            <Info />
-            <MainStore />
-            <MainSlide />
-            <StoreGrid />
+            <Register />
+            <Login />
         </>
     )
 }
