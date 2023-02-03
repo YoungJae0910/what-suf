@@ -13,7 +13,6 @@ import MainReservationGrid from "../src/components/MainReservaition/MainReservat
 import TopButton from "./components/TopButton/TopButton"
 import ItemDetail from "./components/ItemDetail/ItemDetail"
 
-
 function App() {
     return (
         <>
