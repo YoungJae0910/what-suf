@@ -1,13 +1,29 @@
 import React from "react"
+import { useQuery } from "react-query"
 import styled from "styled-components"
+import { reservation } from "../Api/api"
 
 export default function MainReservationGrid() {
+    const { isLoading, isError, data, error } = useQuery(
+        "reservation",
+        reservation
+    )
+    console.log(data)
+
     return (
         <WrapDiv>
-            <ItemDiv></ItemDiv>
-            <ItemDiv></ItemDiv>
-            <ItemDiv></ItemDiv>
-            <ItemDiv></ItemDiv>
+            {data &&
+                data.map((item) => {
+                    return (
+                        <>
+                            <ItemDiv>
+                                <p>{item.id}</p>
+                                <p>{item.price}</p>
+                            </ItemDiv>
+                        </>
+                    )
+                })}
+
             <ItemMoreBtn>More...</ItemMoreBtn>
         </WrapDiv>
     )

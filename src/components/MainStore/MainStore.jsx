@@ -14,7 +14,7 @@ const WarpDiv = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-
+    margin-bottom: 20px;
     font-size: 32px;
     font-weight: bold;
 `

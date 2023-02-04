@@ -147,7 +147,14 @@ const ItemDetailImgBottom = styled.img`
     width: 70%;
     margin-bottom: 20px;
 `
-const RullDiv = styled.div``
+const RullDiv = styled.div`
+    width: 70%;
+    border-bottom: 1px solid #b4b4b4;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+`
 
 const RullH1 = styled.h1`
     margin-top: 10px;
