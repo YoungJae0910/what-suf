@@ -24,14 +24,29 @@ export default function Header() {
         } //  window 에서 스크롤을 감시를 종료
     })
 
+    const logout = () => {
+        localStorage.clear()
+    }
+
+    const localId = localStorage.getItem("id")
+    console.log("localId", localId)
     return (
         <>
             {ScrollActive ? (
                 <WrapDiv>
                     <MainLogo src={hahahoho} alt="" />
                     <div>
-                        <HeaderBtn>SignUp</HeaderBtn>
-                        <HeaderBtn>Login</HeaderBtn>
+                        {localId === null ? (
+                            <>
+                                <HeaderBtn>SignUp</HeaderBtn>
+                                <HeaderBtn>Login</HeaderBtn>
+                            </>
+                        ) : (
+                            <HeaderBtnDiv>
+                                <p>{localId}</p>
+                                <HeaderBtn onClick={logout}>LogOut</HeaderBtn>
+                            </HeaderBtnDiv>
+                        )}
                     </div>
                 </WrapDiv>
             ) : null}
@@ -65,4 +80,11 @@ const HeaderBtn = styled.button`
     border: none;
     border-radius: 5px;
     cursor: pointer;
+`
+
+const HeaderBtnDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 `

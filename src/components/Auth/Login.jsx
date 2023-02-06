@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { useQuery } from "react-query"
+import { getUserId } from "../Api/api"
 import {
     AuthButton,
     AuthForm,
@@ -10,9 +12,20 @@ export default function Login() {
     const [id, setId] = useState("")
     const [password, setPassword] = useState("")
 
+    const { isLoading, isError, data, error } = useQuery("res", getUserId)
+
     const onLoginFormSubmit = async (e) => {
         e.preventDefault()
-        // Do someting
+
+        const test = data.filter(
+            (user) => user.id === id && user.password === password
+        )
+        if (test.length === 0) {
+            alert("다시시도하시라")
+            return
+        }
+        console.log(test)
+        window.localStorage.setItem("id", test[0]?.id)
     }
 
     return (

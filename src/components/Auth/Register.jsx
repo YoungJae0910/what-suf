@@ -13,9 +13,7 @@ export default function Register() {
     const [password, setPassword] = useState("")
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
-    const [adress, setAddress] = useState("")
-
-    console.log(id, password, name, email, adress)
+    const [address, setAddress] = useState("")
 
     const { mutate } = useMutation(addUserList)
     const onRegisterFormSubmit = async (e) => {
@@ -25,7 +23,7 @@ export default function Register() {
             password,
             name,
             email,
-            adress
+            address
         }
         mutate(newUser)
         // Do something
@@ -63,7 +61,7 @@ export default function Register() {
                 placeholder="EMAIL"
             />
             <AuthInput
-                value={adress}
+                value={address}
                 onChange={(e) => {
                     setAddress(e.target.value)
                 }}
